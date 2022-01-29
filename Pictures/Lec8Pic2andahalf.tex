@@ -1,4 +1,39 @@
-\begin{center}
+\[
+\begin{tikzcd}[column sep = huge]
+\begin{tikzpicture}[x = 1.4em, y = 1.4em, z = 0.8em, baseline = 0.4em]
+    \begin{scope}[fill=blue, opacity=0.2]
+    \fill
+    (0,0,0) -- (0,1,0) -- (0,1,1) -- (0,0,1) -- (0,0,0);
+    \fill
+    (0,0,0) -- (1,0,0) -- (1,0,1) -- (0,0,1) -- (0,0,0);
+    \fill
+    (0,1,0) -- (1,1,0) -- (1,1,1) -- (0,1,1) -- (0,1,0);
+    \end{scope}
+    \begin{scope}[thick]
+    \draw[black!60]
+    (0,0.4,1) -- (0,1,1);
+    \draw
+    (0,0,1) -- (0,0.45,1)
+    (0,0,0) -- (0,1,0)
+    (0,0,0) -- (1,0,0) -- (1,0,1) -- (0,0,1) -- (0,0,0)
+    (0,1,0) -- (1,1,0) -- (1,1,1) -- (0,1,1) -- (0,1,0);
+    \end{scope}
+\end{tikzpicture}
+\ar[r, "\alpha_1\cup c_x\cup\alpha_2"] \ar[d] & E \ar[d, " p"]\\
+\begin{tikzpicture}[x = 1.4em, y = 1.4em, z = 0.8em, baseline = 0.4em]
+    \begin{scope}[fill=blue!20, thick]
+    \filldraw
+    (1,0,0) -- (1,1,0) -- (1,1,1) -- (1,0,1) -- (1,0,0);
+    \filldraw
+    (1,0,0) -- (1,1,0) -- (0,1,0) -- (0,0,0) -- (1,0,0);
+    \filldraw
+    (0,1,0) -- (1,1,0) -- (1,1,1) -- (0,1,1) -- (0,1,0);
+    \end{scope}
+\end{tikzpicture}
+\ar[r, "H"'] \ar[ur, dashed] & B
+\end{tikzcd}
+\]
+\comment{\begin{center}
     \(
     \begin{tikzcd}
     \begin{tikzpicture}[x=4em, y=4em, baseline=1.4em]
@@ -23,4 +58,4 @@
     p(x)\ar[r, hook]&Y\ar[r, hook]& p(E)
     \end{tikzcd}
     \)
-\end{center}
+\end{center}}
